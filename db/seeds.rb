@@ -53,6 +53,59 @@ owner4.save()
     'owner_id' => nil
     })
 
+pet1.save()
+
+  pet2 = Pet.new({
+    'name' => 'Gigi',
+    'nickname' => "Wrath of God",
+    'age' => 9,
+    'admission_date' => '01.06.2018',
+    'adoptability' => 'True',
+    'species' => 'Cat',
+    'breed' => 'British Shorthair',
+    'owner_id' => nil
+      })
+
+pet2.save()
+
+pet3 = Pet.new({
+  'name' => 'Alex',
+  'nickname' => "IceCube",
+  'age' => 1,
+  'admission_date' => '05.11.2018',
+  'adoptability' => 'TRUE',
+  'species' => 'Exotic',
+  'breed' => 'Boa Constrictor',
+  'owner_id' => owner2.id
+  })
+
+pet3.save()
+
+pet4 = Pet.new({
+  'name' => 'FeeFee',
+  'nickname' => "The Smaug",
+  'age' => 20,
+  'admission_date' => '29.11.2018',
+  'adoptability' => 'TRUE',
+  'species' => 'Exotic',
+  'breed' => 'Iguana',
+  'owner_id' => owner2.id
+  })
+
+pet4.save()
+
+pet5 = Pet.new({
+  'name' => 'Paco',
+  'nickname' => "El Loco",
+  'age' => 6,
+  'admission_date' => '21.11.2018',
+  'adoptability' => 'TRUE',
+  'species' => 'Exotic',
+  'breed' => 'Scarlet macaw',
+  'owner_id' => owner1.id
+  })
+
+pet5.save()
 
 
 binding.pry
