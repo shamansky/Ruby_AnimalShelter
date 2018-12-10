@@ -1,0 +1,19 @@
+<h1>All Pets</h1>
+
+<hr />
+<div class="row">
+  <p>(Click on a pets name for details)</p>
+</div>
+<div class="pet">
+
+  <% for pet in @pets %>
+  <div class="pet-info">
+
+    <p>Name: <a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name %></a></p>
+    <p>Owner: <%= pet.owner.pretty_name %></p>
+
+    <hr />
+  </div>
+  <% end %>
+
+</div>

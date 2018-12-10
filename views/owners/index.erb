@@ -1,0 +1,19 @@
+<h1>Potential Owners</h1>
+
+<hr />
+<div class="row">
+  <p>(Click on an owner name for details)</p>
+</div>
+<div class="pet">
+
+  <% for owner in @owners %>
+  <div class="pet-info" id="<%= owner.name %>">
+    <a class="name" href="/owners/<%= owner.id %>">
+    <!-- <img class="house_logo" src="/images/<%= house.name.downcase%>_logo.jpg" alt="<%= house.name.downcase%> logo"> -->
+  </a>
+
+    <hr />
+  </div>
+  <% end %>
+
+</div>

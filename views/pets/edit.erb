@@ -1,0 +1,29 @@
+<div class="container" id="edit-container">
+
+  <h1>Edit <%= @pet.pretty_name %></h1>
+  <hr/>
+
+  <form action="/pets/<%=@pet.id %>" method="post">
+    <label for="name" >Name</label>
+    <input type="text" name="name" value="<%=@pet.name%>">
+    <label for="nickname">Nickname</label>
+    <input type="text" name="nickname" value="<%=@pet.nickname%>">
+    <label for="age">Age</label>
+    <input type="number" name="age" value="<%=@pet.age%>">
+    <label for="admission_date" >Admission Date</label>
+    <input type="text" name="admission_date" value="<%=@pet.admission_date%>">
+    <label for="adoptability" >Adoptability</label>
+    <input type="text" name="adoptability" value="<%=@pet.adoptability%>">
+    <label for="species" >Species</label>
+    <input type="text" name="species" value="<%=@pet.species%>">
+    <label for="breed" >Breed</label>
+    <input type="text" name="breed" value="<%=@pet.breed%>">
+    <label for="owner_id">Owner</label>
+    <select name="owner_id">
+      <% for owner in @owners %>
+      <option <%= 'selected' if owner.id == @pet.owner_id %> value="<%=owner.id%>"><%=owner.pretty_name%></option>
+      <%end %>
+    </select>
+    <input type="submit" value="Save">
+  </form>
+</div>
