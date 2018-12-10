@@ -7,9 +7,8 @@
 <div class="pet">
 
   <% for owner in @owners %>
-  <div class="pet-info" id="<%= owner.name %>">
+  <div class="pet-info" id="<%= owner.pretty_name_owner %>">
     <a class="name" href="/owners/<%= owner.id %>">
-    <!-- <img class="house_logo" src="/images/<%= house.name.downcase%>_logo.jpg" alt="<%= house.name.downcase%> logo"> -->
   </a>
 
     <hr />

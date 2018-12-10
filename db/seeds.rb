@@ -50,7 +50,7 @@ owner4.save()
     'adoptability' => 'FALSE',
     'species' => 'Dog',
     'breed' => 'Rottweiler',
-    'owner_id' => nil
+    'owner_id' => owner3.id
     })
 
 pet1.save()
@@ -63,7 +63,7 @@ pet1.save()
     'adoptability' => 'True',
     'species' => 'Cat',
     'breed' => 'British Shorthair',
-    'owner_id' => nil
+    'owner_id' => owner4.id
       })
 
 pet2.save()
