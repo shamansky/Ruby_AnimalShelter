@@ -21,7 +21,7 @@
       <label for="owner_id">Owner</label>
       <select name="owner_id">
       <% for owner in @owners %>
-      <option value="<%=owner.id%>"><%=owner.pretty_name%></option>
+      <option value="<%=owner.id%>"><%=owner.pretty_name_owner%></option>
       <%end %>
     </select>
     <input type="submit" value="Save">

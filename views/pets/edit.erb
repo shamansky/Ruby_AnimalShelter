@@ -1,6 +1,6 @@
 <div class="container" id="edit-container">
 
-  <h1>Edit <%= @pet.pretty_name %></h1>
+  <h1>Edit <%= @pet.pretty_name_pet %></h1>
   <hr/>
 
   <form action="/pets/<%=@pet.id %>" method="post">
@@ -21,7 +21,7 @@
     <label for="owner_id">Owner</label>
     <select name="owner_id">
       <% for owner in @owners %>
-      <option <%= 'selected' if owner.id == @pet.owner_id %> value="<%=owner.id%>"><%=owner.pretty_name%></option>
+      <option <%= 'selected' if owner.id == @pet.owner_id %> value="<%=owner.id%>"><%=owner.pretty_name_owner%></option>
       <%end %>
     </select>
     <input type="submit" value="Save">
