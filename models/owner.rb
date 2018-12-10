@@ -14,6 +14,10 @@ attr_accessor :first_name, :last_name, :age, :location
     @location = options['location']
   end
 
+  def pretty_name_owner()
+      return "#{@first_name} #{@last_name}"
+    end
+
   def save()
       sql = "INSERT INTO owners (first_name, last_name, age, location) VALUES ($1, $2, $3, $4) RETURNING id"
       values = [@first_name, @last_name, @age, @location]
