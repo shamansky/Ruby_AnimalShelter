@@ -96,7 +96,7 @@ pet4.save()
 
 pet5 = Pet.new({
   'name' => 'Paco',
-  'nickname' => '"El Loco"',
+  'nickname' => '"Loco"',
   'age' => 6,
   'admission_date' => '21.11.2018',
   'adoptability' => TRUE,

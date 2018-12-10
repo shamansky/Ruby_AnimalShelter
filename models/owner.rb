@@ -62,7 +62,4 @@ attr_accessor :first_name, :last_name, :age, :location
       return pets.map{|pet| Pet.new(pet)}
     end
 
-    
-
-
 end

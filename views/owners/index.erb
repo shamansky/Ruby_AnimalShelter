@@ -10,13 +10,13 @@
   <div class="pet-info" id="<%= owner.pretty_name_owner %>">
 
     <p>Name: <a class="name" href="/owners/<%=owner.id %>"> <%= owner.pretty_name_owner %></a></p>
-    <p>Pets: <%= owner.pets %></p>
+    <p>Pets:</p>
+    <% for pet in owner.pets %>
+    <p><%= pet.pretty_name_pet %></p>
+    <% end %>
 
     <hr />
   </div>
   <% end %>
 
 </div>
-
-
-<!-- array.map{|x| x[:price]} -->
