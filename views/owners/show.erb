@@ -1,19 +1,15 @@
 <div class="container">
 
-  <h1><%= @owner.name %></h1>
-  <div class="row">
-    <div class="pet-info">
-    </div>
-  </div>
+  <h1><%= @owner.pretty_name_owner %></h1>
 
-  <h2 class = "row">Pets</h2>
-  <div class="Pet">
+
+  <h2 class = "row">Pets under care:</h2>
+  <div class="pet">
 
     <% for pet in @pets %>
     <div class="pet-info">
 
-      <p>Name: <a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
-      <p>Owner: <%= pet.owner.name %></p>
+      <p>Pet Name: <a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
 
       <hr />
     </div>
