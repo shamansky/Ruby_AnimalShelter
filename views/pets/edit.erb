@@ -13,9 +13,16 @@
     <label for="admission_date" >Admission Date</label>
     <input type="text" name="admission_date" value="<%=@pet.admission_date%>">
     <label for="adoptability" >Adoptability</label>
-    <input type="text" name="adoptability" value="<%=@pet.adoptability%>">
+    <select name="adoptability" value="<%=@pet.adoptability%>">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
     <label for="species" >Species</label>
-    <input type="text" name="species" value="<%=@pet.species%>">
+    <select name ="species" id="species-selection" value="<%=@pet.species%>">
+      <option value="Dogs">Dogs</option>
+      <option value="Cats">Cats</option>
+      <option value="Exotic Animals">Exotic Animals</option>
+    </select>
     <label for="breed" >Breed</label>
     <input type="text" name="breed" value="<%=@pet.breed%>">
     <label for="owner_id">Owner</label>

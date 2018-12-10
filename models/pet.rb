@@ -23,7 +23,7 @@ def pretty_name_pet()
   end
 
   def save()
-    sql = "INSERT INTO pets (name, nickname, age, admission_date, adoptability, species, breed, owner_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *"
+    sql = "INSERT INTO pets (name, nickname, age, admission_date, adoptability, species, breed, owner_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id"
     values = [@name, @nickname, @age, @admission_date, @adoptability, @species, @breed, @owner_id]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id']
@@ -67,5 +67,6 @@ def pretty_name_pet()
     return Owner.new(result)
   end
 
+  
 
 end

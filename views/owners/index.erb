@@ -1,4 +1,4 @@
-<h1>Potential Owners</h1>
+<h1>All the Owners</h1>
 
 <hr />
 <div class="row">
@@ -8,11 +8,15 @@
 
   <% for owner in @owners %>
   <div class="pet-info" id="<%= owner.pretty_name_owner %>">
-    <a class="name" href="/owners/<%= owner.id %>">
-  </a>
+
+    <p>Name: <a class="name" href="/owners/<%=owner.id %>"> <%= owner.pretty_name_owner %></a></p>
+    <p>Pets: <%= owner.pets %></p>
 
     <hr />
   </div>
   <% end %>
 
 </div>
+
+
+<!-- array.map{|x| x[:price]} -->
