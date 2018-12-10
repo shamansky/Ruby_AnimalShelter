@@ -28,34 +28,34 @@ attr_accessor :first_name, :last_name, :age, :location
     end
 
     def self.delete_all()
-      sql = "DELETE FROM houses"
+      sql = "DELETE FROM owners"
       SqlRunner.run(sql)
     end
 
     def delete()
-      sql = "DELETE FROM houses WHERE id = $1"
+      sql = "DELETE FROM owners WHERE id = $1"
       values = [@id]
       SqlRunner.run(sql, values)
     end
 
     def self.all()
-      sql = "SELECT * FROM houses"
+      sql = "SELECT * FROM owners"
       results = SqlRunner.run(sql)
-      return results.map {|house| House.new(house)}
+      return results.map {|owner| Owner.new(owner)}
     end
 
     def self.find(id)
-      sql = "SELECT * FROM houses WHERE id = $1"
+      sql = "SELECT * FROM owners WHERE id = $1"
       values = [id]
-      house =  SqlRunner.run(sql, values)[0]
-      return House.new(house)
+      owner =  SqlRunner.run(sql, values)[0]
+      return Owner.new(owner)
     end
 
-    def students()
-      sql = "SELECT * FROM students WHERE house_id = $1"
+    def pets()
+      sql = "SELECT * FROM pets WHERE owner_id = $1"
       values = [@id]
-      students = SqlRunner.run(sql, values)
-      return students.map{|student| Student.new(student)}
+      pets = SqlRunner.run(sql, values)
+      return pets.map{|pet| Pet.new(pet)}
     end
 
 
