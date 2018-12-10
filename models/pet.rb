@@ -10,7 +10,7 @@ def initialize(options)
   @id = options['id'].to_i if options['id']
   @name = options['name']
   @nickname = options['nickname']
-  @owner_id = options['owner_id'].to_i() if options['owner_id']
+  @owner_id = options['owner_id'].to_i()
   @age = options['age'].to_i()
   @admission_date = options['admission_date']
   @adoptability = options['adoptability']
@@ -23,7 +23,7 @@ def pretty_name_pet()
   end
 
   def save()
-    sql = "INSERT INTO pets (name, nickname, age, admission_date, adoptability, species, breed, owner_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id"
+    sql = "INSERT INTO pets (name, nickname, age, admission_date, adoptability, species, breed, owner_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *"
     values = [@name, @nickname, @age, @admission_date, @adoptability, @species, @breed, @owner_id]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id']
@@ -63,7 +63,7 @@ def pretty_name_pet()
   def owner()
     sql = "SELECT * FROM owners WHERE id = $1"
     values = [@owner_id]
-    result = SqlRunner.run(sql, values)
+    result = SqlRunner.run(sql, values)[0]
     return Owner.new(result)
   end
 

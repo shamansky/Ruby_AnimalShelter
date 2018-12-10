@@ -3,23 +3,31 @@
   <h1>Add a Pet</h1>
   <hr/>
 
-      <form action="/pets/<%=@pet.id %>" method="post">
+      <form action="/pets" method="post">
       <label for="name" >Name</label>
-      <input type="text" name="name" value="<%=@pet.name%>">
+      <input type="text" name="name">
       <label for="nickname">Nickname</label>
-      <input type="text" name="nickname" value="<%=@pet.nickname%>">
+      <input type="text" name="nickname">
       <label for="age">Age</label>
-      <input type="number" name="age" value="<%=@pet.age%>">
+      <input type="number" name="age">
       <label for="admission_date" >Admission Date</label>
-      <input type="text" name="admission_date" value="<%=@pet.admission_date%>">
+      <input type="text" name="admission_date">
       <label for="adoptability" >Adoptability</label>
-      <input type="text" name="adoptability" value="<%=@pet.adoptability%>">
-      <label for="species" >Species</label>
-      <input type="text" name="species" value="<%=@pet.species%>">
+        <select name="adoptability">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      <label for="species-selection" >Select Species:</label>
+      <select name ="species" id="species-selection">
+        <option value="Dogs">Dogs</option>
+        <option value="Cats">Cats</option>
+        <option value="Exotic Animals">Exotic Animals</option>
+      </select>
       <label for="breed" >Breed</label>
-      <input type="text" name="breed" value="<%=@pet.breed%>">
+      <input type="text" name="breed">
       <label for="owner_id">Owner</label>
       <select name="owner_id">
+
       <% for owner in @owners %>
       <option value="<%=owner.id%>"><%=owner.pretty_name_owner%></option>
       <%end %>

@@ -19,7 +19,7 @@ attr_accessor :first_name, :last_name, :age, :location
     end
 
   def save()
-      sql = "INSERT INTO owners (first_name, last_name, age, location) VALUES ($1, $2, $3, $4) RETURNING id"
+      sql = "INSERT INTO owners (first_name, last_name, age, location) VALUES ($1, $2, $3, $4) RETURNING *"
       values = [@first_name, @last_name, @age, @location]
       result = SqlRunner.run(sql, values)
       @id = result[0]["id"]
