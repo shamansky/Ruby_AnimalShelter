@@ -20,3 +20,6 @@ CREATE TABLE pets(
   breed VARCHAR(255),
   owner_id INT REFERENCES owners(id) ON DELETE CASCADE
 );
+
+
+<a class="name" href="/owners/<%= owner.id %>">

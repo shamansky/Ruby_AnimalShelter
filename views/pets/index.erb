@@ -9,7 +9,7 @@
   <div class="pet-info">
 
     <p>Name: <a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
-    <p>Owner: <%= pet.owner.pretty_name_owner %></p>
+    <p>Owner: <a class="name" href="/owners/<%= pet.owner_id %>"><%= pet.owner.pretty_name_owner %></p>
 
     <hr />
   </div>
