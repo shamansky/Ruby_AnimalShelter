@@ -18,5 +18,5 @@ CREATE TABLE pets(
   adoptability BOOLEAN,
   species VARCHAR(255),
   breed VARCHAR(255),
-  owner_id INT REFERENCES owners(id)
+  owner_id INT REFERENCES owners(id) ON DELETE CASCADE
 );

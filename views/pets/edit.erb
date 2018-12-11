@@ -25,9 +25,9 @@
     <label for="breed" >Breed</label>
     <input type="text" name="breed" value="<%=@pet.breed%>">
     <label for="owner_id">Owner</label>
-    <select name="owner_id">
+    <select name="owner_id" value="<%=@pet.owner_id%>">
       <% for owner in @owners %>
-      <option <%= 'selected' if owner.id == @pet.owner_id %> value="<%=owner.id%>"><%=owner.pretty_name_owner%></option>
+      <option value="<%=owner.id%>"><%=owner.pretty_name_owner%></option>
       <%end %>
     </select>
     <input type="submit" value="Save">

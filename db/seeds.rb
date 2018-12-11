@@ -42,6 +42,16 @@ owner4 = Owner.new({
 
 owner4.save()
 
+owner5 = Owner.new({
+  'first_name' => 'Shepherd',
+  'last_name' => 'Book',
+  'age' => 55,
+  'location' => 'Montana'
+  })
+
+owner5.save()
+
+
   pet1 = Pet.new({
     'name' => 'Boogie',
     'nickname' => '"Destroyer of Worlds"',

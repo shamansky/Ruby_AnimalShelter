@@ -31,7 +31,7 @@ def pretty_name_pet()
 
   def update()
     sql = "UPDATE pets SET (name, nickname, age, admission_date, adoptability, species, breed, owner_id) = ($1, $2, $3, $4, $5, $6, $7, $8) WHERE id = $9"
-    values = [@name, @nickname, @age, @admission_date, @adoptability, @species, @breed, @owner_id]
+    values = [@name, @nickname, @age, @admission_date, @adoptability, @species, @breed, @owner_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -67,6 +67,6 @@ def pretty_name_pet()
     return Owner.new(result)
   end
 
-  
+
 
 end
