@@ -1,16 +1,21 @@
 <div class="container" id="edit-container">
 
   <h1>Edit <%= @owner.pretty_name_owner %></h1>
+  <hr/>
 
   <form action="/owners/<%=@owner.id %>" method="post">
     <label for="first_name" >First Name</label>
     <input type="text" name="first_name" value="<%=@owner.first_name%>">
+    <hr/>
     <label for="last_name">Last Name</label>
     <input type="text" name="last_name" value="<%=@owner.last_name%>">
+    <hr/>
     <label for="age">Age</label>
     <input type="number" name="age" value="<%=@owner.age%>">
+    <hr/>
     <label for="location" >Location</label>
     <input type="text" name="location" value="<%=@owner.location%>">
+    <hr/>
   <input type="submit" value="Save">
   </form>
 </div>

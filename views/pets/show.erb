@@ -10,6 +10,7 @@
       <h3>Breed: <%= @pet.breed %></h3>
       <h3>Age: <%= @pet.age %></h3>
       <h3>Owner: <%= @pet.owner.pretty_name_owner %></h3>
+      <hr/>
       <form action="/pets/<%=@pet.id%>/edit" method="GET">
         <input type="submit" value="Edit">
       </form>

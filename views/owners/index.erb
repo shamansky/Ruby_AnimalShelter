@@ -1,23 +1,17 @@
 <h1>All the Owners</h1>
 <p>(Click on an owner name for details)</p>
 <hr />
-<div class="row">
-</div>
-<div class="owner">
 
   <% for owner in @owners %>
   <div class="owner-info" id="<%= owner.pretty_name_owner %>">
 
     <p>Name: <a class="name" href="/owners/<%=owner.id %>"> <%= owner.pretty_name_owner %></a></p>
-    <p>Pets: </p>
+    <p>Pets:
     <% for pet in owner.pets %>
-    <a class="pet-name" href="/pets/<%=pet.id %>">
-    <p><%= pet.pretty_name_pet %></p>
+    <a class="pet-name" href="/pets/<%=pet.id %>"><%= pet.pretty_name_pet %></p>
 
     <% end %>
 
     <hr />
   </div>
   <% end %>
-
-</div>

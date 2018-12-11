@@ -2,17 +2,11 @@ body {
   padding: 0;
   margin: 0;
   background-color: black;
-  align-self: center;
-}
-
-.topnav {
-  background-color: silver;
 }
 
 nav {
   background-color: silver;
 }
-
 
 .container {
   height: 100vh;
@@ -24,6 +18,6 @@ nav {
 
 #home-container {
   background-image: url('/images/main_page.jpg');
-  background-size: cover;
+  background-size: 100% 100%
 
 }
