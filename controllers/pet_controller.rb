@@ -19,12 +19,6 @@ end
 get '/pets/:id' do
   @pet = Pet.find(params['id'])
   erb(:"pets/show")
-end#
-
-get '/pets/:id/edit' do
-  @owners = Owner.all
-  @pet = Pet.find(params['id'])
-  erb(:"pets/edit")
 end
 
 post '/pets/:id' do
@@ -37,4 +31,10 @@ post '/pets/:id/delete' do
   pet = Pet.find(params['id'])
   pet.delete
   redirect to '/pets'
+end
+
+get '/pets/:id/edit' do
+  @owners = Owner.all
+  @pet = Pet.find(params['id'])
+  erb(:"pets/edit")
 end

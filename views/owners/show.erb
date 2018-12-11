@@ -15,5 +15,14 @@
     </div>
     <% end %>
 
+    <form action="/owners/<%=@owner.id%>/edit" method="GET">
+      <input type="submit" value="Edit">
+    </form>
+
+    <form action="/owners/<%=@owner.id%>/delete" method="POST">
+      <input type="submit" value="Delete">
+    </form>
+
+
 
 </div>

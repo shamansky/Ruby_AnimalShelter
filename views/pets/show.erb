@@ -13,10 +13,10 @@
       <h3>Age: <%= @pet.age %></h3>
       <h3>Owner: <%= @pet.owner.pretty_name_owner %></h3>
       <!-- <a class="button" href="/pets/<%=@pet.id%>/edit">Edit</a> -->
-      <form action="/pets/<%=@pet.id%>/edit" method="POST">
+      <form action="/pets/<%=@pet.id%>/edit" method="GET">
         <input type="submit" value="Edit">
       </form>
-      
+
       <form action="/pets/<%=@pet.id%>/delete" method="POST">
         <input type="submit" value="Delete">
       </form>
