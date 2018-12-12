@@ -5,8 +5,8 @@
   <% for pet in @pets %>
   <div class="pet-info">
 
-    <p>Name: <a href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
-    <p>Owner: <a href="/owners/<%= pet.owner_id %>"><%= pet.owner.pretty_name_owner %></p>
+    <p>Name: <a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
+    <p>Owner: <a class="name" href="/owners/<%= pet.owner_id %>"><%= pet.owner.pretty_name_owner %></p>
 
     <hr />
   <% end %>

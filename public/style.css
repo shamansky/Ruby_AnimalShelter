@@ -78,7 +78,7 @@ align-items: center;
 
 
 a.name {
-  color: gold;
+  color: silver;
   text-decoration: none;
 }
 
@@ -94,8 +94,7 @@ a.name:visited {
 
 #create-pet-container {
   background-image: url('/images/add_pet.jpg');
-  height: 800px;
-  width: 1600px;
+  background-size: cover;
   opacity: 0.9;
 
 }
