@@ -6,14 +6,14 @@
 
   <h2>Pets under care:</h2>
     <% for pet in @pets %>
-    <p><a class="name" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
+    <p><a class="owner" href="/pets/<%= pet.id %>"> <%= pet.pretty_name_pet %></a></p>
     <% end %>
 <hr/>
-    <form action="/owners/<%=@owner.id%>/edit" method="GET">
+    <form class="owner" action="/owners/<%=@owner.id%>/edit" method="GET">
       <input type="submit" value="Edit">
     </form>
 
-    <form action="/owners/<%=@owner.id%>/delete" method="POST">
+    <form class="owner" action="/owners/<%=@owner.id%>/delete" method="POST">
       <input type="submit" value="Delete">
     </form>
 
