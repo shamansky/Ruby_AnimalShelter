@@ -16,12 +16,12 @@ nav {
 
 
 h1 {
-  color: silver;
+  color: black;
   margin:0;
   font-variant: small-caps;
   font-size: 100px;
   text-align: center;
-  font-family: serif;
+  font-family: Times, Times New Roman, Georgia, serif;
   margin-bottom: 20px;
 }
 
@@ -31,13 +31,27 @@ h2, h3{
   font-variant: small-caps;
   font-size: 50px;
   text-align: center;
-  font-family: serif;
+  font-family:  Lucida Console, Courier, monospace;
 
 }
 
 .topnav {
-    background-color: silver;
+    background-color: aquamarine;
 
+}
+
+
+.topnav a:hover {
+    background-color: gray;
+    color: black;
+}
+
+form {
+display:flex;
+flex-direction: column;
+margin: 0 auto;
+width:30%;
+align-items: center;
 }
 
 .pet {
@@ -47,7 +61,7 @@ h2, h3{
   flex-wrap: wrap;
 }
 .pet-info {
-  width:500px;
+  font-family: Times, Times New Roman, Georgia, serif;
   text-align: center;
 }
 
@@ -58,16 +72,37 @@ h2, h3{
   flex-wrap: wrap;
 }
 .owner-info {
-  width:500px;
+  font-family: Times, Times New Roman, Georgia, serif;
   text-align: center;
 }
 
 
+a.name {
+  color: gold;
+  text-decoration: none;
+}
 
-
+a.name:visited {
+  color: gold;
+}
 
 #home-container {
   background-image: url('/images/main_page.jpg');
   background-size: 100% 100%
+
+}
+
+#create-pet-container {
+  background-image: url('/images/add_pet.jpg');
+  height: 800px;
+  width: 1600px;
+  opacity: 0.9;
+
+}
+
+#create-owner-container {
+  background-image: url('/images/add_owner.jpg');
+  background-size:cover;
+  opacity: 0.9;
 
 }
