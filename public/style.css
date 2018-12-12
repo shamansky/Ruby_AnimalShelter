@@ -89,19 +89,16 @@ a.name:visited {
 #home-container {
   background-image: url('/images/main_page.jpg');
   background-size: 100% 100%
-
 }
 
 #create-pet-container {
   background-image: url('/images/add_pet.jpg');
   background-size: cover;
   opacity: 0.9;
-
 }
 
 #create-owner-container {
   background-image: url('/images/add_owner.jpg');
   background-size:cover;
   opacity: 0.9;
-
 }
