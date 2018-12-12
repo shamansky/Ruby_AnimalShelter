@@ -40,7 +40,14 @@ def pretty_name_pet()
     SqlRunner.run(sql)
   end
 
+  def delete_pet()
+    sql="UPDATE pets SET owner_id = NULL WHERE owner_id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def delete()
+    delete_pet()
     sql = "DELETE FROM pets WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
